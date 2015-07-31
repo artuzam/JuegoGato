@@ -77,6 +77,86 @@ public class Gato{
     }
   }
   
+  public String verificarGanador(){
+    String s="no";
+    int suma=0;
+    boolean ganador=false;
+    for(int i=0; i<matriz.length && !ganador;i++)
+    {
+      suma=matriz[i][0]+matriz[i][1]+matriz[i][2];
+      if(suma==3)
+      {
+        s="Gana: " + getNombreO();
+        ganador=true;
+      }
+      if(suma==21)
+      {
+        s="Gana: " + getNombreX();
+        ganador=true;
+      }
+    }
+    
+    for(int i=0; i<matriz.length && !ganador;i++)
+    {
+      suma=matriz[0][i]+matriz[1][i]+matriz[2][i];
+      if(suma==3)
+      {
+        s="Gana: " + getNombreO();
+        ganador=true;
+      }
+      if(suma==21)
+      {
+        s="Gana: " + getNombreX();
+        ganador=true;
+      }
+    }
+    suma=matriz[0][0]+matriz[1][1]+matriz[2][2];
+    if(suma==3)
+    {
+      s="Gana: " + getNombreO();
+      ganador=true;
+    }
+    if(suma==21)
+    {
+      s="Gana: " + getNombreX();
+      ganador=true;
+    }
+    
+    suma=matriz[0][2]+matriz[1][1]+matriz[2][0];
+    if(suma==3)
+    {
+      s="Gana: " + getNombreO();
+      ganador=true;
+    }
+    if(suma==21)
+    {
+      s="Gana: " + getNombreX();
+      ganador=true;
+    }
+    return s;
+  }
   
- 
+  public void imprimir(){
+    System.out.println("Estado del tablero");
+    for (int i=0; i < tablero.length; i++) {
+      System.out.print("| ");
+      for (int j=0; j < tablero[i].length; j++) {
+        System.out.print(tablero[i][j]+ " | ");
+      }
+      System.out.println();
+    }
+  }
+  
+  public void imprimira(){
+    System.out.println("Estado del tablero");
+    for (int i=0; i < matriz.length; i++) {
+      System.out.print("| ");
+      for (int j=0; j < matriz[i].length; j++) {
+        System.out.print(matriz[i][j]+ " | ");
+      }
+      System.out.println();
+    }
+  }
 }
+
+
