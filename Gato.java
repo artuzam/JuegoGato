@@ -49,12 +49,23 @@ public class Gato{
   }
   
   public void pedirPosicion(String nombre){
-    String f=JOptionPane.showInputDialog(null, nombre+":\n"+"Ingrese la fila", "Gato", JOptionPane.QUESTION_MESSAGE);
-    String c=JOptionPane.showInputDialog(null, nombre+":\n"+"Ingrese la columna\n", "Gato", JOptionPane.QUESTION_MESSAGE);
+    String f=JOptionPane.showInputDialog(null, nombre+":\n"+"Ingrese la fila \n(numero entre 1 y 3)", "Gato", JOptionPane.QUESTION_MESSAGE);
+    String c=JOptionPane.showInputDialog(null, nombre+":\n"+"Ingrese la columna\n(numero entre 1 y 3)", "Gato", JOptionPane.QUESTION_MESSAGE);
     fila=Integer.parseInt(f);
-    fila--;
+    if(fila < 4){
+      fila--;}
+    else {
+      String x=JOptionPane.showInputDialog(null, nombre+":\n"+"Numero invalido.Ingrese la fila", "Gato", JOptionPane.QUESTION_MESSAGE);
+      fila=Integer.parseInt(x);
+    }  
     columna=Integer.parseInt(c);
+    if (columna < 4){
     columna--;
+    }
+    else {
+    String y=JOptionPane.showInputDialog(null, nombre+":\n"+"Numero invalido.Ingrese la columna", "Gato", JOptionPane.QUESTION_MESSAGE);
+    columna=Integer.parseInt(y);
+    }
   }
   
   public void convertirTablero(){
