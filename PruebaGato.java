@@ -21,7 +21,7 @@ public class PruebaGato{
             g.pedirPosicion(g.getNombreX());
             if(!g.modificarTablero(7))
             {
-              JOptionPane.showMessageDialog(null, "La posición esta ocupada\n", "Gato", JOptionPane.QUESTION_MESSAGE);
+              JOptionPane.showMessageDialog(null, "La posición está ocupada\n", "Gato", JOptionPane.QUESTION_MESSAGE);
             }
           }while(g.modificarTablero(7));
         }
@@ -30,7 +30,7 @@ public class PruebaGato{
             g.pedirPosicion(g.getNombreO());
             if(!g.modificarTablero(1))
             {
-              JOptionPane.showMessageDialog(null, "La posición esta ocupada\n", "Gato", JOptionPane.QUESTION_MESSAGE);
+              JOptionPane.showMessageDialog(null, "La posición está ocupada\n", "Gato", JOptionPane.QUESTION_MESSAGE);
             }
           } while(g.modificarTablero(1));
         }

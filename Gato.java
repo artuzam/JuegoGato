@@ -55,7 +55,7 @@ public class Gato{
     if(fila < 4){
       fila--;}
     else {
-      String x=JOptionPane.showInputDialog(null, nombre+":\n"+"Numero invalido.Ingrese la fila", "Gato", JOptionPane.QUESTION_MESSAGE);
+      String x=JOptionPane.showInputDialog(null, nombre+":\n"+"Número inválido.Ingrese la fila", "Gato", JOptionPane.QUESTION_MESSAGE);
       fila=Integer.parseInt(x);
     }  
     columna=Integer.parseInt(c);
@@ -63,7 +63,7 @@ public class Gato{
     columna--;
     }
     else {
-    String y=JOptionPane.showInputDialog(null, nombre+":\n"+"Numero invalido.Ingrese la columna", "Gato", JOptionPane.QUESTION_MESSAGE);
+    String y=JOptionPane.showInputDialog(null, nombre+":\n"+"Número inválido.Ingrese la columna", "Gato", JOptionPane.QUESTION_MESSAGE);
     columna=Integer.parseInt(y);
     }
   }
